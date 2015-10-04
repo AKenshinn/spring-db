@@ -1,0 +1,1 @@
+INSERT INTO FIRST VALUES(1,NOW(),NOW(),"firstName");

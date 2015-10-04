@@ -14,7 +14,7 @@
    <li>mapping entities.</li>
 </ol>
 
-<h4>hibernate4.xml</h4>
+<h4>applicationContext.xml</h4>
 <ol>
    <li>change component scan.</li>
    <li>change package scan of sessionFactory.</li>

@@ -8,9 +8,9 @@ public interface GenericDao<Entity, ID extends Serializable> {
 	
 	Entity findById(ID id);
 
-    List findAll();
+    List<Entity> findAll();
 
-    List search(Map<String, Object> parameterMap);
+    List<Entity> search(Map<String, Object> parameterMap);
 
     ID insert(Entity entity);
 

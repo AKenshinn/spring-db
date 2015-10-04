@@ -7,4 +7,4 @@ release.properties
 dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
-create-schema.sql
+src/main/resources/scripts/create-schema.sql

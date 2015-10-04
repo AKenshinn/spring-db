@@ -11,8 +11,9 @@
         <property name="hibernate.connection.password">root</property>
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
         <property name="show_sql">true</property>
-        <property name="hbm2ddl.auto">update</property>
+        <!-- <property name="hbm2ddl.auto">update</property> -->
         
-		<!-- <mapping class="com.email.model.MailTemplate"/> -->	
+        
+		<mapping class="com.db.entities.First"></mapping>	
     </session-factory>
 </hibernate-configuration>

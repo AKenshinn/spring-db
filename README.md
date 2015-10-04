@@ -15,7 +15,11 @@
 </ol>
 
 <h4>hibernate4.xml</h4>
-<p>change component scan.</p>
+<ol>
+   <li>change component scan.</li>
+   <li>change package scan of sessionFactory</li>
+</ol>
+
 
 <h3>How to run generate schema for Development</h3>
 <p>mvn hibernate3:hbm2ddl sql:execute</p> 

@@ -21,6 +21,9 @@ public class FirstRepositoryTest {
 	@Autowired
 	private SessionFactory sessionFactory;
 	
+	@Autowired
+	private FirstRepository firstRepository;
+	
 	@Test
 	public void testLoadSessionFactoryShouldPass() throws Exception {
 		assertNotNull(sessionFactory);

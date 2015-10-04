@@ -39,7 +39,7 @@
    
    	<!-- Session Factory -->
     <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean" 
-       	p:packagesToScan="com.db.entities"
+       	p:packagesToScan="com.db.*"
        	p:dataSource-ref="dataSource">
   		<property name="hibernateProperties">
             <props>

@@ -22,4 +22,4 @@
 
 
 <h3>How to run generate schema for Development</h3>
-<p>mvn hibernate3:hbm2ddl sql:execute</p> 
+<p>mvn hibernate4:export sql:execute</p> 

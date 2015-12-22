@@ -11,7 +11,7 @@ import com.db.entities.First;
 import com.db.repositories.FirstRepository;
 import com.db.services.FirstService;
 
-@Service(value="firstService")
+@Service(value = "firstService")
 public class FirstServiceImpl implements FirstService {
 
 	@Autowired

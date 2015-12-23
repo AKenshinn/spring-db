@@ -5,8 +5,8 @@ import java.util.List;
 import java.util.Map;
 
 public interface GenericDao<Entity, ID extends Serializable> {
-	
-	Entity findById(ID id);
+
+    Entity findById(ID id);
 
     List<Entity> findAll();
 
@@ -21,4 +21,5 @@ public interface GenericDao<Entity, ID extends Serializable> {
     void deleteById(ID id);
     
     void savaOrUpdate(Entity entity);
+
 }

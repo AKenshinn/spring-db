@@ -19,7 +19,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.db.entities.First;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations={"classpath:applicationContext.xml"})
+@ContextConfiguration(locations={"classpath:/applicationContext.xml"})
 @TransactionConfiguration
 @Transactional
 public class FirstRepositoryTest {

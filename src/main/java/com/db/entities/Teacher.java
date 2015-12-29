@@ -1,16 +1,17 @@
 package com.db.entities;
 
 import com.db.entities.base.AbstractEntity;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 import java.util.List;
 
 /**
- * Created by Kenshinn on 12/23/2015 AD.
+ * Created by Kenshinn on 12/29/2015 AD.
  */
 @Entity
-@Table(name = "STUDENTS")
-public class Student  extends AbstractEntity {
+@Table(name = "TEACHER")
+public class Teacher extends AbstractEntity {
 
   @Column(name = "FIRST_NAME")
   private String firstName;
@@ -18,11 +19,8 @@ public class Student  extends AbstractEntity {
   @Column(name = "LAST_NAME")
   private String lastName;
 
-  @ManyToMany
-  @JoinTable(name="STUDENT_COURSE",
-    joinColumns={ @JoinColumn(name="STUDENT_ID", nullable=false) },
-    inverseJoinColumns={ @JoinColumn(name="COURSE_ID", nullable=false) }
-  )
+  @JsonIgnore
+  @OneToMany(mappedBy = "teacher", fetch = FetchType.LAZY)
   private List<Course> courses;
 
   public String getFirstName() {

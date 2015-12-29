@@ -1,9 +1,8 @@
 package com.db.entities;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.ManyToMany;
-import javax.persistence.Table;
+import com.db.entities.base.AbstractEntity;
+
+import javax.persistence.*;
 import java.util.List;
 
 /**
@@ -19,6 +18,10 @@ public class Course extends AbstractEntity {
   @ManyToMany(mappedBy = "courses")
   private List<Student> students;
 
+  @ManyToOne
+  @JoinColumn(name = "TEACHER_ID", nullable = false)
+  private Teacher teacher;
+
   public String getName() {
     return name;
   }
@@ -33,6 +36,14 @@ public class Course extends AbstractEntity {
 
   public void setStudents(List<Student> students) {
     this.students = students;
+  }
+
+  public Teacher getTeacher() {
+    return teacher;
+  }
+
+  public void setTeacher(Teacher teacher) {
+    this.teacher = teacher;
   }
 
 }

@@ -29,7 +29,6 @@ public abstract class HibernateDAOImpl<Entity, ID extends Serializable> implemen
         clazz = (Class) pt.getActualTypeArguments()[0];
     }
 
-
     public void setEntityClass(final Class clazz) {
         this.clazz = clazz;
     }

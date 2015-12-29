@@ -14,6 +14,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.transaction.TransactionConfiguration;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -96,6 +97,19 @@ public class StudentRepositoryTest {
 
     Student result = studentRepository.findById(deleteById.getId());
     assertNull(result);
+
+  }
+
+  @Test
+  public void testSearchWithStudentRepositoryShouldFindAnat() throws Exception {
+    HashMap<String, Object> parameterMap = new HashMap<>();
+    parameterMap.put("firstName", anat.getFirstName());
+    parameterMap.put("lastName", anat.getLastName());
+
+    List<Student> result = studentRepository.search(parameterMap);
+    assertNotNull(result);
+    assertThat(result.get(0).getFirstName(), is("Anat"));
+    assertThat(result.get(0).getLastName(), is("Abdullagasim"));
 
   }
 

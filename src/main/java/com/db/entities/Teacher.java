@@ -10,7 +10,7 @@ import java.util.List;
  * Created by Kenshinn on 12/29/2015 AD.
  */
 @Entity
-@Table(name = "TEACHER")
+@Table(name = "TEACHERS")
 public class Teacher extends AbstractEntity {
 
   @Column(name = "FIRST_NAME")

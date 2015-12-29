@@ -92,10 +92,10 @@ public class StudentRepositoryTest {
 
   @Test
   public void testDeleteByIdWithStudentRepositoryShouldNotFindAkkhawat() throws Exception {
-    Student deleteById = studentRepository.findById(akkhawat.getId());
-    studentRepository.deleteById(deleteById.getId());
+    Student delete = studentRepository.findById(akkhawat.getId());
+    studentRepository.deleteById(delete.getId());
 
-    Student result = studentRepository.findById(deleteById.getId());
+    Student result = studentRepository.findById(delete.getId());
     assertNull(result);
 
   }

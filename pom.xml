@@ -273,7 +273,7 @@
           </sqlCommand>
           <srcFiles>
             <srcFile>${project.basedir}/src/main/resources/scripts/create-schema.sql</srcFile>
-            <srcFile>${project.basedir}/src/main/resources/scripts/init-data.sql</srcFile>z
+            <!--<srcFile>${project.basedir}/src/main/resources/scripts/init-data.sql</srcFile>-->
           </srcFiles>
         </configuration>
       </plugin>

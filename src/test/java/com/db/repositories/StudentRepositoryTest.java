@@ -61,10 +61,10 @@ public class StudentRepositoryTest {
   }
 
   @Test
-  public void testFindAllWithStudentRepositoryShouldReturnListOfAllStudent() throws Exception {
+  public void testFindAllWithStudentRepositoryShouldReturnListOfAllStudents() throws Exception {
     List<Student> result = studentRepository.findAll();
     assertNotNull(result);
-    assertThat(result.size(), is(new GreaterOrEqual(2)));
+    assertThat(result.size(), is(new GreaterOrEqual<>(2)));
 
   }
 

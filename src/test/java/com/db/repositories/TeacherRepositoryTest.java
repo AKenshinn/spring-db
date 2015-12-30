@@ -29,14 +29,14 @@ public class TeacherRepositoryTest {
   @Autowired
   private TeacherRepository teacherRepository;
 
-  private Teacher papupat, poonna;
+  private Teacher panupat, poonna;
 
   @Before
   public void setUp() throws Exception {
-    papupat = new Teacher();
-    papupat.setFirstName("Panupat");
-    papupat.setLastName("Horma");
-    teacherRepository.insert(papupat);
+    panupat = new Teacher();
+    panupat.setFirstName("Panupat");
+    panupat.setLastName("Horma");
+    teacherRepository.insert(panupat);
 
     poonna = new Teacher();
     poonna.setFirstName("Poonna");
@@ -52,25 +52,25 @@ public class TeacherRepositoryTest {
 
   @Test
   public void testFindByIdWithTeacherRepositoryShouldReturnTeacherThatSetup() throws Exception {
-    Teacher result = teacherRepository.findById(papupat.getId());
+    Teacher result = teacherRepository.findById(panupat.getId());
     assertNotNull(result);
-    assertThat(result.getId(), is(papupat.getId()));
+    assertThat(result.getId(), is(panupat.getId()));
     assertThat(result.getFirstName(), is("Panupat"));
     assertThat(result.getLastName(), is("Horma"));
     
   }
 
   @Test
-  public void testFindAllWithTeacherRepositoryShouldReturnListOfAllTeacher() throws Exception {
+  public void testFindAllWithTeacherRepositoryShouldReturnListOfAllTeachers() throws Exception {
     List<Teacher> result = teacherRepository.findAll();
     assertNotNull(result);
-    assertThat(result.size(), is(new GreaterOrEqual(2)));
+    assertThat(result.size(), is(new GreaterOrEqual<>(2)));
     
   }
 
   @Test
   public void testUpdateWithTeacherRepositoryShouldChangePanupatToHimura() throws Exception {
-    Teacher update = teacherRepository.findById(papupat.getId());
+    Teacher update = teacherRepository.findById(panupat.getId());
     update.setFirstName("Himura");
     teacherRepository.update(update);
 
@@ -82,7 +82,7 @@ public class TeacherRepositoryTest {
 
   @Test
   public void testDeleteWithTeacherRepositoryShouldNotFindPanupat() throws Exception {
-    Teacher delete = teacherRepository.findById(papupat.getId());
+    Teacher delete = teacherRepository.findById(panupat.getId());
     teacherRepository.delete(delete);
 
     Teacher result = teacherRepository.findById(delete.getId());
@@ -92,7 +92,7 @@ public class TeacherRepositoryTest {
 
   @Test
   public void testDeleteByIdWithTeacherRepositoryShouldNotFindPanupat() throws Exception {
-    Teacher delete = teacherRepository.findById(papupat.getId());
+    Teacher delete = teacherRepository.findById(panupat.getId());
     teacherRepository.deleteById(delete.getId());
 
     Teacher result = teacherRepository.findById(delete.getId());
@@ -103,8 +103,8 @@ public class TeacherRepositoryTest {
   @Test
   public void testSearchWithStudentRepositoryShouldFindAnat() throws Exception {
     HashMap<String, Object> parameterMap = new HashMap<>();
-    parameterMap.put("firstName", papupat.getFirstName());
-    parameterMap.put("lastName", papupat.getLastName());
+    parameterMap.put("firstName", panupat.getFirstName());
+    parameterMap.put("lastName", panupat.getLastName());
 
     List<Teacher> result = teacherRepository.search(parameterMap);
     assertNotNull(result);

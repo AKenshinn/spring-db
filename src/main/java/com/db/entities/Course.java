@@ -1,6 +1,7 @@
 package com.db.entities;
 
 import com.db.entities.base.AbstractEntity;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 import java.util.List;
@@ -15,6 +16,7 @@ public class Course extends AbstractEntity {
   @Column(name = "NAME")
   private String name;
 
+  @JsonIgnore
   @ManyToMany(mappedBy = "courses")
   private List<Student> students;
 

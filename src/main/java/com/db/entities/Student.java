@@ -1,6 +1,7 @@
 package com.db.entities;
 
 import com.db.entities.base.AbstractEntity;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 import java.util.List;
@@ -18,6 +19,7 @@ public class Student  extends AbstractEntity {
   @Column(name = "LAST_NAME")
   private String lastName;
 
+  @JsonIgnore
   @ManyToMany
   @JoinTable(name="STUDENT_COURSE",
     joinColumns={ @JoinColumn(name="STUDENT_ID", nullable=false) },

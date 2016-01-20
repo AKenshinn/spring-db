@@ -9,6 +9,8 @@ import javax.persistence.MappedSuperclass;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 @MappedSuperclass
 public abstract class AbstractEntity {
 	
@@ -17,10 +19,12 @@ public abstract class AbstractEntity {
 	@Column(name = "ID")
 	private Long id;
 	
+	@JsonFormat(shape=JsonFormat.Shape.STRING, pattern="dd-MM-yyyy HH:mm a z", timezone="Asia/Bangkok")
 	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name = "CREATED_DATE_TIME")
 	private Date createdDateTime;
 	
+	@JsonFormat(shape=JsonFormat.Shape.STRING, pattern="dd-MM-yyyy HH:mm a z", timezone="Asia/Bangkok")
 	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name = "UPDATED_DATE_TIME")
 	private Date updatedDateTime;

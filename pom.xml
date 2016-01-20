@@ -192,7 +192,8 @@
     </dependency>
   </dependencies>
 
-  <!-- <profiles>
+	<!-- Profiles -->
+	<!-- <profiles>
   <profile>
     <id>dev</id>
           we'll add more stuff here...
@@ -273,7 +274,7 @@
           </sqlCommand>
           <srcFiles>
             <srcFile>${project.basedir}/src/main/resources/scripts/create-schema.sql</srcFile>
-            <!--<srcFile>${project.basedir}/src/main/resources/scripts/init-data.sql</srcFile>-->
+            <srcFile>${project.basedir}/src/main/resources/scripts/init-data.sql</srcFile>
           </srcFiles>
         </configuration>
       </plugin>

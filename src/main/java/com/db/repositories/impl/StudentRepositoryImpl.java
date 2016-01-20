@@ -10,6 +10,7 @@ import java.io.Serializable;
 /**
  * Created by Kenshinn on 12/29/2015 AD.
  */
+@SuppressWarnings("unchecked")
 @Repository(value = "studentRepository")
 public class StudentRepositoryImpl extends HibernateDAOImpl<Student, Serializable> implements StudentRepository {
 

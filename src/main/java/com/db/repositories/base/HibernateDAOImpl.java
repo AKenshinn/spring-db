@@ -15,10 +15,11 @@ import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
+@SuppressWarnings({"rawtypes", "unchecked"})
 @Transactional
 public abstract class HibernateDAOImpl<Entity, ID extends Serializable> implements GenericDao<Entity, ID> {
 
-    protected Class clazz;
+		protected Class clazz;
 
     @Autowired
     protected SessionFactory sessionFactory;
@@ -32,8 +33,8 @@ public abstract class HibernateDAOImpl<Entity, ID extends Serializable> implemen
     public void setEntityClass(final Class clazz) {
         this.clazz = clazz;
     }
-
-    public Entity findById(ID id) {
+    
+		public Entity findById(ID id) {
         return (Entity) getCurrentSession().get(clazz, id);
     }
 

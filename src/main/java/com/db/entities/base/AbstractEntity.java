@@ -19,14 +19,14 @@ public abstract class AbstractEntity {
 	@Column(name = "ID")
 	private Long id;
 	
-	@JsonFormat(shape=JsonFormat.Shape.STRING, pattern="dd-MM-yyyy HH:mm a z", timezone="Asia/Bangkok")
-	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name = "CREATED_DATE_TIME")
+	@JsonFormat(shape=JsonFormat.Shape.STRING, pattern="dd-MM-yyyy", timezone="Asia/Bangkok")
+	@Temporal(TemporalType.DATE)
+	@Column(name = "CREATED_DATE")
 	private Date createdDateTime;
 	
-	@JsonFormat(shape=JsonFormat.Shape.STRING, pattern="dd-MM-yyyy HH:mm a z", timezone="Asia/Bangkok")
-	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name = "UPDATED_DATE_TIME")
+	@JsonFormat(shape=JsonFormat.Shape.STRING, pattern="dd-MM-yyyy", timezone="Asia/Bangkok")
+	@Temporal(TemporalType.DATE)
+	@Column(name = "UPDATED_DATE")
 	private Date updatedDateTime;
 
 	public Long getId() {

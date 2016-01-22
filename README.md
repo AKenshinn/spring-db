@@ -1,6 +1,6 @@
 SpringDB
 ========
-This is example database with Spring + Hibernate + JUnit.
+The example project using Spring, Hibernate, Maven and JUnit.
 
 ### Configuration for running ###
 Change to use your **username** and **password** of database configuration in

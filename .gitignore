@@ -124,3 +124,4 @@ hs_err_pid*
 
 # custom
 src/main/resources/scripts/create-schema.sql
+.README.md.html

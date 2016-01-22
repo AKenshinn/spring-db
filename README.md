@@ -1,25 +1,23 @@
-<h1>SpringDB</h1>
-<p>Database start project.</p>
+SpringDB
+========
+This is example database with Spring + Hibernate + JUnit.
 
-<h3>How to config when use to another project</h3>
-<h4>pom.xml</h4>
-<p>change Database Config.<p>
+### Configuration for running ###
+Change to use your **username** and **password** of database configuration in
+ 1. **pom.xml**
+ 2. src/main/resources/**hibernate.properties**
+ 3. src/main/resources/**hibernate.cfg.xml**
 
-<h4>database.properties</h4>
-<p>change properties.</p>
+### Running ###
+1. Create database using name **spring_db**.
+2. Install this project using this command below :
+ 	
+	~~~
+	mvn clean install
+	~~~
+	
+3. Create schema and initial data using command below :
 
-<h4>hibernate.cfg.xml</h4>
-<ol>
-   <li>change connection url.</li>
-   <li>mapping entities.</li>
-</ol>
-
-<h4>applicationContext.xml</h4>
-<ol>
-   <li>change component scan.</li>
-   <li>change package scan of sessionFactory.</li>
-</ol>
-
-
-<h3>How to run generate schema for Development</h3>
-<p>mvn hibernate4:export sql:execute</p> 
+	~~~
+	mvn hibernate4:export sql:execute
+	~~~

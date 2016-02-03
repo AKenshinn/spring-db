@@ -17,12 +17,9 @@
     <!-- Taglibs -->
     <servlet.jstl.version>1.2</servlet.jstl.version>
     <!-- Spring -->
-    <spring.version>4.1.1.RELEASE</spring.version>
+    <spring.version>4.1.2.RELEASE</spring.version>
     <!-- Hibernate -->
     <hibernate.version>4.2.2.Final</hibernate.version>
-    <hibernate.annotations.version>3.4.0.GA</hibernate.annotations.version>
-    <hibernate.validator.version>4.1.0.Final</hibernate.validator.version>
-    <ejb3.persistence.version>1.0.2.GA</ejb3.persistence.version>
     <!-- MySQL -->
     <mysql.version>5.1.19</mysql.version>
     <!--Json-->
@@ -103,21 +100,6 @@
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-core</artifactId>
       <version>${hibernate.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.hibernate</groupId>
-      <artifactId>hibernate-annotations</artifactId>
-      <version>${hibernate.annotations.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.hibernate</groupId>
-      <artifactId>hibernate-validator</artifactId>
-      <version>${hibernate.validator.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.hibernate</groupId>
-      <artifactId>ejb3-persistence</artifactId>
-      <version>${ejb3.persistence.version}</version>
     </dependency>
     <!-- Mysql -->
     <dependency>

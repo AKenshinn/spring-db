@@ -3,7 +3,7 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.db</groupId>
-	<artifactId>SpringDB</artifactId>
+	<artifactId>spring-db</artifactId>
 	<version>1.0.0</version>
 	<packaging>jar</packaging>
 	<name>SpringDB</name>
@@ -248,5 +248,5 @@
 			</resource>
 		</resources>
 	</build>
-	
+
 </project>

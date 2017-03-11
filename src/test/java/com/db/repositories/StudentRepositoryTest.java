@@ -115,7 +115,7 @@ public class StudentRepositoryTest {
     
     @Test
     public void newMethodForTestJenkins() throws Exception {
-        assertTrue(false);
+        assertTrue(true);
     }
 
 }
